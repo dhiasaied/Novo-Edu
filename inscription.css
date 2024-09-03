@@ -1,0 +1,66 @@
+/* Styles généraux */
+
+body {
+    background-color: #f8f9fa;
+  }
+  
+  .container {
+    max-width: 500px;
+    margin: auto;
+    padding: 30px;
+    border: 1px solid #ced4da;
+    border-radius: 10px;
+    background-color: #fff;
+    border: 0 0 10px solid #ffc000; 
+    box-shadow: 0 0 10px #ffc000;   }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .form-group {
+    margin-bottom: 25px;
+  }
+  
+  label {
+    font-weight: bold;
+  }
+  
+  .btn-warning {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 5px;
+    background-color: #ffc000;
+    border: none;
+    transition: background-color 0.3s;
+  }
+  
+  .btn-warning:hover {
+    background-color: #ffc000;
+  }
+  
+  /* Styles spécifiques pour les champs */
+  
+  .form-control {
+    border-radius: 5px;
+  }
+  
+  .form-text {
+    font-size: 14px;
+    color: #6c757d;
+  }
+  
+  /* Responsive */
+  
+  @media (max-width: 576px) {
+    .container {
+      padding: 20px;
+    }
+  }
+  img{
+  width: 200px;
+   height: 150px;
+     border-radius: 50%;
+  }  

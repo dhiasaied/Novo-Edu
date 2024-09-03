@@ -1,0 +1,13 @@
+.card {
+    transition: all 0.3s ease;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+  }
+  .profile-image {
+    border-radius: 50%;
+    border: 3px solid #007bff;
+  }
+  .card-text {
+    font-size: 18px;
+  }

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inscription</title>
+  <link href="assets/css/inscription.css" rel="stylesheet">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body style="margin: 34px;">
+
+<div class="container">
+    <h2 class="mt-5">Inscription</h2>
+    <div class="text-center">
+        <img src="assets/images/logo.png" alt="Image">
+    </div>
+    <form action="ajout_inscription.php" method="POST" id="registrationForm">
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="exampleInputFirstName">Prénom</label>
+            <input type="text" class="form-control" id="exampleInputFirstName" name="prenom" placeholder="Entrez votre prénom" required pattern="[A-Za-zÀ-ÿ -]{1,}">
+        </div>
+        <div class="form-group col-md-6">
+            <label for="exampleInputLastName">Nom</label>
+            <input type="text" class="form-control" id="exampleInputLastName" name="nom" placeholder="Entrez votre nom" required pattern="[A-Za-zÀ-ÿ -]{1,}">
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="exampleInputMatricule">Matricule</label>
+            <input type="text" class="form-control" id="exampleInputMatricule" name="matricule" placeholder="Entrez votre matricule">
+        </div>
+        <div class="form-group col-md-6">
+            <label for="exampleInputBloodGroup">Groupe Sanguin</label>
+            <input type="text" class="form-control" id="exampleInputBloodGroup" name="groupe_sanguin" placeholder="Entrez votre groupe sanguin">
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="exampleInputDateOfBirth">Date de naissance</label>
+            <input type="date" class="form-control" id="exampleInputDateOfBirth" name="date_de_naissance" required>
+        </div>
+        <div class="form-group col-md-6">
+            <label for="exampleInputCity">Ville de résidence</label>
+            <input type="text" class="form-control" id="exampleInputCity" name="ville" placeholder="Entrez votre ville" required pattern="[A-Za-zÀ-ÿ -]{1,}">
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="activityDropdown">Activité</label>
+            <select class="form-control" id="activityDropdown" name="activite">
+              <option value="0">choisir un Activite</option>
+                <option value="1">Lecteur</option>
+                <option value="2">Theathre</option>
+                <option value="3">Peinture </option>
+                <option value="4">Yoga</option>
+
+            </select>
+        </div>
+        <div class="form-group col-md-6">
+            <label for="hobbiesDropdown">Loisir</label>
+            <select class="form-control" id="hobbiesDropdown" name="loisir">
+              <option value="0">choisir un Loisir</option>
+                <option value="1">Music</option>
+                <option value="2">Dance</option>
+                <option value="3">Natation </option>
+                <option value="4">Photographie </option>
+
+            </select>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="sportsDropdown">Sport</label>
+            <select class="form-control" id="sportsDropdown" name="sport">
+              <option value="0">choisir un Sports</option>
+                <option value="1">karatie</option>
+                <option value="2">Foot-ball</option>
+                <option value="3">Hand-ball</option>
+                <option value="4">Tennis</option>
+            </select>
+        </div>
+        <div class="form-group col-md-6">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="transportCheckbox" name="transport">
+                <label class="form-check-label" for="transportCheckbox">
+                    Besoin de transport
+                </label>
+            </div>
+        </div>
+    </div>
+    <button type="submit" class="btn btn-warning" onclick="return validateForm()">S'inscrire</button>
+</form>
+</div>
+<script>
+  function validateForm() {
+      var firstName = document.getElementById("exampleInputFirstName").value;
+      var lastName = document.getElementById("exampleInputLastName").value;
+      var matricule = document.getElementById("exampleInputMatricule").value;
+      var bloodGroup = document.getElementById("exampleInputBloodGroup").value;
+      var dateOfBirth = document.getElementById("exampleInputDateOfBirth").value;
+      var city = document.getElementById("exampleInputCity").value;
+
+      if (firstName !== "" && lastName !== "" && matricule !== "" && bloodGroup !== "" && dateOfBirth !== "" && city !== "") {
+          window.location.href = "business-card.html"; // Redirect to business-card.html
+          return false; // Prevent form submission (optional)
+      } else {
+          alert("Veuillez remplir tous les champs.");
+          return false; 
+      }
+  }
+</script>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
